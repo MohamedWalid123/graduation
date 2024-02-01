@@ -77,21 +77,23 @@ class ONBORDING3 extends StatelessWidget {
                 //   "computer program or AI system that assists \nindividuals with ADHD by providing support,\nreminders, and information through text-based or\n spoken conversations, helping them manage their\n daily tasks and challenges related to the condition",
                 // style: TextStyle(fontSize: 15),),
 SizedBox(height: 20,),
-                Container(
-                  decoration: BoxDecoration(
-                      color:  AppColors.buttonColor,
-                      borderRadius: BorderRadius.circular(16)),
-                  width: 282,
-                  height: 46,
-                  alignment: Alignment.center,
-                  child: Center(
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text("Next",style: TextStyle(color: Colors.white,fontSize: 24,fontFamily: "Outfit")),
-                        Icon(Icons.keyboard_double_arrow_right_outlined,color: Colors.white,)
-                      ],
+                InkWell(onTap: (){},
+                  child: Container(
+                    decoration: BoxDecoration(
+                        color:  AppColors.buttonColor,
+                        borderRadius: BorderRadius.circular(16)),
+                    width: 282,
+                    height: 46,
+                    alignment: Alignment.center,
+                    child: Center(
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text("Next",style: TextStyle(color: Colors.white,fontSize: 24,fontFamily: "Outfit")),
+                          Icon(Icons.keyboard_double_arrow_right_outlined,color: Colors.white,)
+                        ],
+                      ),
                     ),
                   ),
                 ),

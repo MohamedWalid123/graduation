@@ -1,60 +1,43 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:flutter_verification_code/flutter_verification_code.dart';
+import 'package:flutter/services.dart';
+import 'package:graduation/presentation/screens/on_bording1.dart';
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
+class SplashScreen extends StatefulWidget{
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  _SplashScreenState createState() => _SplashScreenState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
-  bool _onEditing = true;
-
+class _SplashScreenState extends State<SplashScreen> {
   @override
-  build(BuildContext context) {
+  void initState() {
+
+    super.initState();
+    Timer(const Duration(seconds: 5),
+            ()=>Navigator.pushReplacement(context,
+            MaterialPageRoute(builder:
+                (context) =>
+            const ONBORDING1()
+            )
+        )
+    );
+  }
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          const Padding(
-            padding: EdgeInsets.all(8.0),
-            child: Center(
-              child: Text(
-                'Enter your code',
-                style: TextStyle(fontSize: 20.0),
-              ),
-            ),
-          ),
-          VerificationCode(
-            textStyle: Theme.of(context)
-                .textTheme
-                .bodyText2!
-                .copyWith(color: Theme.of(context).primaryColor),
-            keyboardType: TextInputType.number,
-            underlineColor: Colors
-                .amber, // If this is null it will use primaryColor: Colors.red from Theme
-            length: 4,
-            cursorColor:
-            Colors.blue, // If this is null it will default to the ambient
-            // clearAll is NOT required, you can delete it
-            // takes any widget, so you can implement your design
-            clearAll: Padding(
-              padding: const EdgeInsets.all(8.0),
-            ),
-            margin: const EdgeInsets.all(12),
-            onCompleted: (String value) {
+      body: SingleChildScrollView(
+          child: Stack(
+            children: [Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+Image.asset("assets/images/Group 1231.png"),
+]),
+         ] ),
 
-            },
-            onEditing: (bool value) {
-              setState(() {
-                _onEditing = value;
-              });
-              if (!_onEditing) FocusScope.of(context).unfocus();
-            },
           ),
 
-        ],
-      ),
     );
   }
 }

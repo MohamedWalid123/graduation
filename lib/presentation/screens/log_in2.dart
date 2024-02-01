@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:graduation/app/app_colors.dart';
 import 'package:graduation/presentation/screens/Forget_pass.dart';
 import 'package:graduation/presentation/screens/log_in.dart';
 import 'package:graduation/presentation/screens/on_boding3.dart';
@@ -111,7 +112,8 @@ class _LOGIN2State extends State<LOGIN2> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
-                          Text("Forget Passwoed?",style: TextStyle(color: Color(0xff15596F))),
+                          InkWell(onTap: (){},
+                              child: Text("Forget Passwoed?",style: TextStyle(color: Color(0xff15596F)))),
                         ],
                       ),
                     ),
@@ -128,39 +130,55 @@ class _LOGIN2State extends State<LOGIN2> {
                         Text('Remember Me'),
                       ],
                     ),SizedBox(height: 20,),
-                    Container(
-                      decoration: BoxDecoration(
-                          color: Color(0xff15596F),
-                          borderRadius: BorderRadius.circular(24)),
-                      width: 320,
-                      height: 44,
-                      alignment: Alignment.center,
-                      child: const Text("Sign In ",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20,fontFamily: "Outfit")),
+                    InkWell(onTap: (){},
+                      child: Container(
+                        decoration: BoxDecoration(
+                            color: Color(0xff15596F),
+                            borderRadius: BorderRadius.circular(24)),
+                        width: 320,
+                        height: 44,
+                        alignment: Alignment.center,
+                        child: const Text("Sign In ",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20,fontFamily: "Outfit")),
+                      ),
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Row(mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Container(
-                            height: 23,
-                            width: 23,
-                            child: Image.asset("assets/images/Google logo.png"),
-                          ),  SizedBox(width: 10,),
-                          Container(
-                            height: 23,
-                            width: 23,
-                            child: Image.asset("assets/images/facebook.png"),
-                          ),SizedBox(width: 10,),
-                          Container(
-                            height: 23,
-                            width: 23,
-                            child: Image.asset("assets/images/apple.png"),
+                          InkWell(
+                            child: Container(
+                              height: 23,
+                              width: 23,
+                              child: Image.asset("assets/images/Google logo.png"),
+                            ),
+                          ),  SizedBox(width: 20,),
+                          InkWell(
+                            child: Container(
+                              height: 23,
+                              width: 23,
+                              child: Image.asset("assets/images/facebook.png"),
+                            ),
+                          ),SizedBox(width: 20,),
+                          InkWell(onTap: (){},
+                            child: Container(
+                              height: 23,
+                              width: 23,
+                              child: Image.asset("assets/images/apple.png"),
+                            ),
                           ),
                         ],
                       ),
                     ),
-                  ],
+                    Padding(
+                      padding: const EdgeInsets.only(left: 48.0),
+                      child: Row(children: [
+                        Text("Don’t have an account ?",style: TextStyle(fontSize: 16),),
+                        InkWell(onTap: (){},
+                            child: Text(" Register Now",style: TextStyle(color:AppColors.buttonColor,fontSize: 16),))
+                      ],),
+                    )  ],
                 ),
+
               ]),
           ],
         ),

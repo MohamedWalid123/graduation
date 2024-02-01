@@ -78,21 +78,23 @@ class ONBORDING1 extends StatelessWidget {
                     SizedBox(
                       height: 12,
                     ),
-                    Container(
-                      decoration: BoxDecoration(
-                          color:  AppColors.buttonColor,
-                          borderRadius: BorderRadius.circular(16)),
-                      width: 282,
-                      height: 46,
-                      alignment: Alignment.center,
-                      child: Center(
-                        child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text("Next",style: TextStyle(color: Colors.white,fontSize: 24,fontFamily: "Outfit")),
-                            Icon(Icons.keyboard_double_arrow_right_outlined,color: Colors.white,)
-                          ],
+                    InkWell(onTap: (){},
+                      child: Container(
+                        decoration: BoxDecoration(
+                            color:  AppColors.buttonColor,
+                            borderRadius: BorderRadius.circular(16)),
+                        width: 282,
+                        height: 46,
+                        alignment: Alignment.center,
+                        child: Center(
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text("Next",style: TextStyle(color: Colors.white,fontSize: 24,fontFamily: "Outfit")),
+                              Icon(Icons.keyboard_double_arrow_right_outlined,color: Colors.white,)
+                            ],
+                          ),
                         ),
                       ),
                     ),

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:graduation/presentation/screens/Congratulations.dart';
 import 'package:graduation/presentation/screens/Forget_pass.dart';
+import 'package:graduation/presentation/screens/Welcome_Back.dart';
+import 'package:graduation/presentation/screens/create_new_pass.dart';
 import 'package:graduation/presentation/screens/log_in.dart';
 import 'package:graduation/presentation/screens/log_in2.dart';
 import 'package:graduation/presentation/screens/on_boding3.dart';
@@ -41,10 +44,25 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:  Verify(),
+      home:  PageView(
+        children: [
+          SplashScreen(),
+ONBORDING1(),
+ONBORDING2(),
+ONBORDING3(),
+ONBORDING4(),
+LOGIN(),
+LOGIN2(),
+FORGET(),
+Verify(),
+NewPassword(),
+          Congratulations(),
+WelcomeBack(),
+        ],
+      ),
     );
   }
-}
+}//SplashScreen
 //ONBORDING1
 //ONBORDING2
 //ONBORDING3
@@ -52,3 +70,7 @@ class MyApp extends StatelessWidget {
 //LOGIN
 //LOGIN2
 //FORGET
+//Verify
+//NewPassword
+//Congratulations
+//WelcomeBack

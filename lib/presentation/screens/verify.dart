@@ -115,7 +115,15 @@ class _VerifyState extends State<Verify> {
                         if (!_onEditing) FocusScope.of(context).unfocus();
                       },
                     ),
-
+                    Padding(
+                      padding: const EdgeInsets.only(left: 78.0),
+                      child: Center(
+                        child: Row(children: [
+                          Text("Don’t receive a code?",style: TextStyle(fontSize: 12),),
+                          InkWell(child: Text("Resend",style: TextStyle(color:AppColors.buttonColor,fontSize: 12),))
+                        ],),
+                      ),
+                    )
                   ],
                 ),
               ),

@@ -82,21 +82,23 @@ class FORGET extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 40,),
-              Container(
-                decoration: BoxDecoration(
-                    color: AppColors.buttonColor,
-                    borderRadius: BorderRadius.circular(16)),
-                width: 361,
-                height: 48,
-                alignment: Alignment.center,
-                child: Center(
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text("Submit",
-                          style: TextStyle(color: Colors.white, fontSize: 22,fontFamily: "Outfit")),
-                    ],
+              InkWell(onTap: (){},
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: AppColors.buttonColor,
+                      borderRadius: BorderRadius.circular(16)),
+                  width: 361,
+                  height: 48,
+                  alignment: Alignment.center,
+                  child: Center(
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text("Submit",
+                            style: TextStyle(color: Colors.white, fontSize: 22,fontFamily: "Outfit")),
+                      ],
+                    ),
                   ),
                 ),
               ),

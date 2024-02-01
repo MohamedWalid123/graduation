@@ -10,12 +10,12 @@ class LOGIN extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(leading: InkWell(onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (builder)=>LOGIN2()));},
-          child: Icon(Icons.arrow_back_ios_new_sharp,color: Colors.black,)),
-
-
-        backgroundColor: AppColors.background,
-        iconTheme: IconThemeData(color: Colors.white),
+       appBar: AppBar(backgroundColor: AppColors.background,
+           //actions: [
+      //
+      //
+      //   backgroundColor: AppColors.background,
+      //   iconTheme: IconThemeData(color: Colors.white),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -59,26 +59,30 @@ class LOGIN extends StatelessWidget {
             SizedBox(height: 30,),
             Column(
               children: [
-                Container(
-                  decoration: BoxDecoration(
-                      color: AppColors.buttonColor,
-                      borderRadius: BorderRadius.circular(24)),
-                  width: 290,
-                  height: 44,
-                  alignment: Alignment.center,
-                  child: const Text("Patient",style: TextStyle(color: Colors.white,fontFamily: "Outfit")),
+                InkWell(onTap: (){},
+                  child: Container(
+                    decoration: BoxDecoration(
+                        color: AppColors.buttonColor,
+                        borderRadius: BorderRadius.circular(24)),
+                    width: 290,
+                    height: 44,
+                    alignment: Alignment.center,
+                    child: const Text("Patient",style: TextStyle(color: Colors.white,fontFamily: "Outfit")),
+                  ),
                 ),
                 SizedBox(height: 20,),
-                Container(
-                  decoration: BoxDecoration(border: Border.all(
-                    color: Color(0xff15596F)
+                InkWell(onTap: (){},
+                  child: Container(
+                    decoration: BoxDecoration(border: Border.all(
+                      color: Color(0xff15596F)
+                    ),
+                        color: Color(0xffF6F9FA),
+                        borderRadius: BorderRadius.circular(24)),
+                    width: 290,
+                    height: 44,
+                    alignment: Alignment.center,
+                    child: const Text("Doctor",style: TextStyle(color:  AppColors.buttonColor,fontFamily: "Outfit")),
                   ),
-                      color: Color(0xffF6F9FA),
-                      borderRadius: BorderRadius.circular(24)),
-                  width: 290,
-                  height: 44,
-                  alignment: Alignment.center,
-                  child: const Text("Doctor",style: TextStyle(color:  AppColors.buttonColor,fontFamily: "Outfit")),
                 ),
                 SizedBox(height: 10,),
                 Center(
@@ -86,7 +90,7 @@ class LOGIN extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text("Already  have an account ?",style: TextStyle(fontFamily: "Outfit")),
-                      InkWell(child: Text("Login",style: TextStyle(color:  AppColors.buttonColor,fontFamily: "Outfit"))),
+                      InkWell(onTap: (){},child: Text("Login",style: TextStyle(color:  AppColors.buttonColor,fontFamily: "Outfit"))),
                     ],
                   ),
                 )

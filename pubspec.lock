@@ -139,6 +139,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.8.3"
+  progress_indicator:
+    dependency: "direct main"
+    description:
+      name: progress_indicator
+      sha256: "7c4dbfb1e28e1390c250ed0a2d668e93a58ae2ea5ee54cdd6b0a2a6844467fd2"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.2.2"
   provider:
     dependency: "direct main"
     description:
@@ -210,4 +218,4 @@ packages:
     version: "2.1.4"
 sdks:
   dart: ">=3.0.6 <4.0.0"
-  flutter: ">=1.16.0"
+  flutter: ">=2.0.0"
