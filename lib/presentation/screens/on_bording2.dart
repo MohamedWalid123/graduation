@@ -65,7 +65,7 @@ class ONBORDING2 extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 10,
+              //height: 10,
             ),
             Column(
               children: [
@@ -110,7 +110,9 @@ class ONBORDING2 extends StatelessWidget {
                 SizedBox(
                   height: 25,
                 ),
-                InkWell(onTap: (){},
+                InkWell(onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (builder)=>ONBORDING3()));
+                },
                   child: Container(
                     decoration: BoxDecoration(
                         color:  AppColors.buttonColor,

@@ -21,7 +21,7 @@ class ONBORDING4 extends StatelessWidget {
                 padding: const EdgeInsets.only(right: 8.0),
                 child: Text(
                   "Skip",
-                  style: TextStyle(fontSize: 19, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                 ),
               ))
         ],
@@ -105,7 +105,7 @@ class ONBORDING4 extends StatelessWidget {
                 SizedBox(
                   height: 25,
                 ),
-                InkWell(onTap: (){},
+                InkWell(onTap: (){ Navigator.push(context, MaterialPageRoute(builder: (builder)=>LOGIN()));},
                   child: Container(
                     decoration: BoxDecoration(
                         color: Color(0xff15596F),

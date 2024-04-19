@@ -8,7 +8,7 @@ class ONBORDING1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      appBar: AppBar(
+      appBar: AppBar(automaticallyImplyLeading: false,
         actions: [
           InkWell(onTap: (){
             Navigator.push(context, MaterialPageRoute(builder: (builder)=>ONBORDING2()));
@@ -52,7 +52,7 @@ class ONBORDING1 extends StatelessWidget {
                 ],
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 18,left: 16),
+                padding: const EdgeInsets.only(top: 5,left: 16),
                 child: Row(
                   children: [
                     Text(
@@ -63,7 +63,7 @@ class ONBORDING1 extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 10,
+               // height: 10,
               ),
               Padding(
                 padding: const EdgeInsets.only(right: 0,left: 0),
@@ -78,7 +78,9 @@ class ONBORDING1 extends StatelessWidget {
                     SizedBox(
                       height: 12,
                     ),
-                    InkWell(onTap: (){},
+                    InkWell(onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (builder)=>ONBORDING2()));
+                    },
                       child: Container(
                         decoration: BoxDecoration(
                             color:  AppColors.buttonColor,

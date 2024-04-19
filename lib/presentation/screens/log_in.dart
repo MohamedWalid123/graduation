@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:graduation/app/app_colors.dart';
+import 'package:graduation/presentation/screens/register_doctor.dart';
+import 'package:graduation/presentation/screens/register_patient.dart';
 import 'package:graduation/presentation/screens/log_in2.dart';
 import 'package:graduation/presentation/screens/on_boding3.dart';
 import 'package:graduation/presentation/screens/on_bording2.dart';
+import 'package:graduation/presentation/screens/on_bording4.dart';
 
 class LOGIN extends StatelessWidget {
   const LOGIN({super.key});
@@ -10,7 +13,16 @@ class LOGIN extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       appBar: AppBar(backgroundColor: AppColors.background,
+       appBar: AppBar(backgroundColor: AppColors.background,automaticallyImplyLeading: false,
+         leading: InkWell(
+             onTap: () {
+               Navigator.push(context,
+                   MaterialPageRoute(builder: (builder) => ONBORDING4()));
+             },
+             child: Icon(
+               Icons.arrow_back_ios_new_sharp,
+               color: Colors.black,
+             )),
            //actions: [
       //
       //
@@ -59,7 +71,7 @@ class LOGIN extends StatelessWidget {
             SizedBox(height: 30,),
             Column(
               children: [
-                InkWell(onTap: (){},
+                InkWell(onTap: (){Navigator.push(context, MaterialPageRoute(builder: (builder)=>RegisterScreen()));},
                   child: Container(
                     decoration: BoxDecoration(
                         color: AppColors.buttonColor,
@@ -71,7 +83,7 @@ class LOGIN extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 20,),
-                InkWell(onTap: (){},
+                InkWell(onTap: (){Navigator.push(context, MaterialPageRoute(builder: (builder)=>RegisterDoc()));},
                   child: Container(
                     decoration: BoxDecoration(border: Border.all(
                       color: Color(0xff15596F)
@@ -90,7 +102,7 @@ class LOGIN extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text("Already  have an account ?",style: TextStyle(fontFamily: "Outfit")),
-                      InkWell(onTap: (){},child: Text("Login",style: TextStyle(color:  AppColors.buttonColor,fontFamily: "Outfit"))),
+                      InkWell(onTap: (){Navigator.push(context, MaterialPageRoute(builder: (builder)=>LoginScreen()));},child: Text("Login",style: TextStyle(color:  AppColors.buttonColor,fontFamily: "Outfit"))),
                     ],
                   ),
                 )

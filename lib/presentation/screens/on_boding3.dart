@@ -19,7 +19,7 @@ class ONBORDING3 extends StatelessWidget {
               SingleChildScrollView(
                 child: Padding(
                   padding: const EdgeInsets.only(right: 8.0),
-                  child: Text("Skip",style: TextStyle(fontSize: 19,fontWeight: FontWeight.bold),),
+                  child: Text("Skip",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
                 ),
               ))
         ],
@@ -77,7 +77,9 @@ class ONBORDING3 extends StatelessWidget {
                 //   "computer program or AI system that assists \nindividuals with ADHD by providing support,\nreminders, and information through text-based or\n spoken conversations, helping them manage their\n daily tasks and challenges related to the condition",
                 // style: TextStyle(fontSize: 15),),
 SizedBox(height: 20,),
-                InkWell(onTap: (){},
+                InkWell(onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (builder)=>ONBORDING4()));
+                },
                   child: Container(
                     decoration: BoxDecoration(
                         color:  AppColors.buttonColor,

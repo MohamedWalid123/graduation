@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:graduation/app/app_colors.dart';
 import 'package:graduation/presentation/screens/log_in.dart';
+import 'package:graduation/presentation/screens/log_in2.dart';
 import 'package:graduation/presentation/screens/on_boding3.dart';
 import 'package:graduation/presentation/screens/on_bording2.dart';
+import 'package:graduation/presentation/screens/verify.dart';
 
 class FORGET extends StatelessWidget {
   const FORGET({super.key});
@@ -14,7 +16,7 @@ class FORGET extends StatelessWidget {
           leading: InkWell(
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (builder) => ONBORDING3()));
+                    MaterialPageRoute(builder: (builder) => LoginScreen()));
               },
               child: Icon(
                 Icons.arrow_back_ios_new_sharp,
@@ -81,13 +83,14 @@ class FORGET extends StatelessWidget {
                       hintText: '@user@gmail.com'),
                 ),
               ),
-              SizedBox(height: 40,),
-              InkWell(onTap: (){},
+              SizedBox(height: 35,),
+              InkWell(onTap: (){ Navigator.push(context,
+                  MaterialPageRoute(builder: (builder) => Verify()));},
                 child: Container(
                   decoration: BoxDecoration(
                       color: AppColors.buttonColor,
                       borderRadius: BorderRadius.circular(16)),
-                  width: 361,
+                  width: 334,
                   height: 48,
                   alignment: Alignment.center,
                   child: Center(
